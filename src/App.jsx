@@ -1,5 +1,5 @@
 import Card from "./Card.jsx"
-
+import Button from "./Button/Button.jsx"
 function App() {
     return (
         <>
@@ -7,6 +7,7 @@ function App() {
         <Card/>
         <Card/>
         <Card/>
+        <Button/>
         </>
     );
    
