@@ -25,12 +25,3 @@
   font-family: Arial, Helvetica, sans-serif;
     color: #1d1d1dda;;
 }
- .btn{
-  display: block;
-  background-color: aquamarine;
-  color: rgb(62, 41, 6);
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
- }
