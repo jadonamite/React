@@ -1,4 +1,4 @@
-import profilePics from "./assets/hammerdisc.jpeg"
+import profilePics from "./assets/thebalddev.jpg"
 function Card() {
     return(
         <div className="card">
