@@ -6,8 +6,13 @@ import { Component } from "react";
 // EG : <component key = value/>
 // EG : <Students name = "hulloma"/>
 
-
-function Students (props){
+function Students (
+    {
+        name="Guest",
+        age=0,
+        isStudent=false
+    }
+){
    const styles ={
     fontFamily:"Arial, Helvetica, sans-serif",
     fontSize:"1.4em",
@@ -20,12 +25,13 @@ function Students (props){
    
     return(
         <div style={styles}>
-            <p>Name: {props.name}</p>
-            <p>Age: {props.age}</p>
-            <p>Student : {props.isStudent ? "Yes":"No"}</p>
+            <p>Name: {name}</p>
+            <p>Age: {age}</p>
+            <p>Student : {isStudent ? "Yes":"No"}</p>
         </div>
     );
 }
+
 
 Students.propTypes = {
     name:PropTypes.string,
@@ -35,9 +41,12 @@ Students.propTypes = {
 
 // DefaultProps = Default values for props in cases where they are noyt passed down from the parents Component
 // EG : name: "Guest"
-Students.defaultProps = {
-    name:"Guest",
-    age:0,
-    isStudent:false
-}
+
+// But they are pretty outdated now
+
+// Students.defaultProps = {
+//     name:"Guest",
+//     age:0,
+//     isStudent:false
+// }
 export default Students
