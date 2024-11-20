@@ -14,7 +14,7 @@ const styles = {
        }
     return(
         <button style={styles}>
-            Click Me   m 
+            Click Me
             
         </button>
 
