@@ -1,40 +1,30 @@
-function List(){
+// refer to the initial commit "Introduction to List (20/11) for further understanding"
+import PropTypes from "prop-types";
 
-    const fruits = [
-        {id: 1, name:"Orange", calories: 40},
-        {id: 2,name:"Apple", calories: 50},        
-        {id: 3,name:"Banana", calories: 100},
-        {id: 4,name:"Coconut", calories: 150},
-        {id: 5,name:"Pineapple", calories: 37}];
+function List({ category = "Category", items = [] }) {
+   const Category = category;
+   const itemslist = items;
 
-
-// lets talk about sorting the object array
-
-// fruits.sort((a,b)=> a.name.localeCompare(b.name));// Will sort the list in Alphabetical Order
-// fruits.sort((a,b)=> b.name.localeCompare(a.name));// Will sort the list in Reverse Alphabetical Order
-// fruits.sort((a,b)=> a.calories-b.calories);// Will sort the list in Numerical Order
-// fruits.sort((a,b)=> a.calories-b.calories);// Will sort the list in reverse Numerical Order
-// fruits.sort((a,b)=> a.id-b.id);// Will sort the list in Numerical Order of the list id
-
-// Lets talk about Filtering
-
-// to Filter an array: lets say to filter the name array to only 
-// names that are three words or less
-const names = ["me","myself","I"];
-const shortNames = names.filter(name => name.length <= 3)
-
-
-    const listItems = fruits.map(fruit => <li key = {fruit.id}>
-      <b>{fruit.name}</b>: <i>{fruit.calories} cal per serving</i>
-        </li>)
-
-
-
-    const listnames = shortNames.map( shortName=><li>{shortName}</li>)
-    return(
-        <>
-        <ol>{listItems}</ol>
-        <ul>{listnames}</ul>
-    </>);
+   const listItems = itemslist.map((item) => (
+      <li key={item.id}>
+         <b>{item.name}</b> : <i>{item.calories} cal per serving</i>
+      </li>
+   ));
+   return (
+      <>
+         <h3 className="list-category">{Category}</h3>
+         <ol className="list-item">{listItems}</ol>
+      </>
+   );
 }
-export default List 
+List.propTypes = {
+   category: PropTypes.string,
+   items: PropTypes.arrayOf(
+      PropTypes.shape({
+         id: PropTypes.number,
+         name: PropTypes.string,
+         calories: PropTypes.number,
+      })
+   ),
+};
+export default List;

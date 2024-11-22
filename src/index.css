@@ -1,27 +1,47 @@
-
-.card{
-  border: 1px solid #9f9d9dcc;
-  border-radius: 15px;
-  box-shadow: 5px 5px 5px #7070706b;
-  padding: 25px;
-  margin: 10px;
-  text-align: center;
-  max-width: 20rem;
-  display: inline-block;
+.card {
+   border: 1px solid #9f9d9dcc;
+   border-radius: 15px;
+   box-shadow: 5px 5px 5px #7070706b;
+   padding: 25px;
+   margin: 10px;
+   text-align: center;
+   max-width: 20rem;
+   display: inline-block;
 }
-.card .cardImage{
-  
-  max-width: 60%;
-  height:auto;
-  border-radius: 50%;
-  margin-bottom: 10px;
+.card .cardImage {
+   max-width: 60%;
+   height: auto;
+   border-radius: 50%;
+   margin-bottom: 10px;
 }
-.card .cardTitle{
-  font-family:Arial, Helvetica, sans-serif;
-  margin:0;
-  color: #121111;
+.card .cardTitle {
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 0;
+   color: #121111;
 }
-.card .cardText{
-  font-family: Arial, Helvetica, sans-serif;
-    color: #1d1d1dda;;
+.card .cardText {
+   font-family: Arial, Helvetica, sans-serif;
+   color: #1d1d1dda;
+}
+.list-category {
+   font-size: 2em;
+   font-weight: bold;
+   border: 1px solid #121111;
+   border-radius: 15px;
+   background-color: bisque;
+}
+.list-category,
+.list-item li {
+   font-family: Arial, Helvetica, sans-serif;
+   text-align: center;
+   list-style: none;
+}
+.list-item {
+   display: grid;
+   gap: 1rem;
+}
+.list-item li:hover {
+   transform: scale(0.8);
+   color: rgb(114, 111, 107);
+   cursor: pointer;
 }
