@@ -45,3 +45,11 @@
    color: rgb(114, 111, 107);
    cursor: pointer;
 }
+button {
+   border-radius: 0.5rem;
+   border: none;
+   padding: 0.3rem 0.8rem;
+   color: antiquewhite;
+   background-color: rgb(127, 208, 255);
+   font-size: 0.6rem;
+}
