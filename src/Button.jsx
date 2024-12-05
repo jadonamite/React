@@ -20,9 +20,7 @@ function Button() {
    const handleClickAgain = (e) => (e.target.textContent = "Hey Stop it");
 
    return (
-      <button onDoubleClick={(event) => handleClickAgain(event)}>
-         Click Me
-      </button>
+      <button onClick={(event) => handleClickAgain(event)}>Click Me</button>
    );
 }
 
@@ -33,5 +31,7 @@ function Button() {
 // return (
 //    <button onDoubleClick={(event) => handleClickAgain(event)}>Click Me</button>
 // );
+
+// Then on double click it will perform the desired  action
 
 export default Button;
