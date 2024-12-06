@@ -54,3 +54,13 @@ button {
    font-size: 3rem;
    display: block;
 }
+.component-button {
+   border-radius: 0.8rem;
+   border: none;
+   padding: 0.5rem 1rem;
+   color: rgb(108, 15, 71);
+   background-color: rgb(255, 183, 0);
+   font-size: 1rem;
+   display: block;
+   cursor: pointer;
+}
