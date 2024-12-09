@@ -55,7 +55,7 @@ function MyComponent() {
                type="radio"
                value="No"
                id=""
-               checked={includeVat == "No"}
+               checked={includeVat === "No"}
                onChange={includeVatToggle}
             />
          </label>
