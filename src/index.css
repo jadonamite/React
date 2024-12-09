@@ -1,3 +1,8 @@
+body {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
 .card {
    border: 1px solid #9f9d9dcc;
    border-radius: 15px;
@@ -85,4 +90,25 @@ div .Counter-container {
 .cnt-btn {
    background-color: rgb(45, 158, 223);
    font-size: 1.5em;
+}
+.color-display {
+   border: 1px solid #0000003e;
+   height: 250px;
+   width: 320px;
+   margin: 1rem auto;
+   border-radius: 12px;
+   box-shadow: 0 5px 5px #585757;
+   transition: 1s ease-out;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 0.8em;
+   margin-bottom: 3rem;
+}
+.color-picker-container {
+   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+   text-align: center;
+}
+.color-picker-container label {
+   display: block;
 }
