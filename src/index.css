@@ -89,7 +89,7 @@ div .Counter-container {
 }
 .cnt-btn {
    background-color: rgb(45, 158, 223);
-   font-size: 1.5em;
+   font-size: 1rem;
 }
 .color-display {
    border: 1px solid #0000003e;
