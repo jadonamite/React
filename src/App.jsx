@@ -1,10 +1,5 @@
-import Button from "./Button.jsx";
-import MyComponent from "./MyComponent.jsx";
-import Counter from "./Counter.jsx";
-import ColorPicker from "./ColorPicker.jsx";
-import UptCounter from "./UpdateFunctions.jsx";
-
+import Card from "./Card.jsx";
 function App() {
-   return <UptCounter />;
+   return <Card />;
 }
 export default App;
