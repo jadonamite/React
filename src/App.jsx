@@ -1,5 +1,6 @@
 import Card from "./Card.jsx";
+import Pfp from "./pfp.jsx";
 function App() {
-   return <Card />;
+   return <Pfp />;
 }
 export default App;
