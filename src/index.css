@@ -2,6 +2,8 @@ body {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
+   background-color: #160616bc;
+   color: #e9e9e9;
 }
 .card {
    border: 1px solid #9f9d9dcc;
@@ -126,6 +128,48 @@ div .Counter-container {
    margin: 1rem;
    display: block;
 }
+.to-do-list {
+   text-align: center;
+}
+.add-btn,
+.del-btn,
+.up-btn,
+.down-btn {
+   border-radius: 0.3rem;
+   border: none;
+   padding: 0.3rem 0.8rem;
+   color: antiquewhite;
+   background-color: rgb(8, 157, 50);
+   font-size: 1em;
+   margin: 0.5rem;
+   display: inline-block;
+   cursor: pointer;
+   transition: background-color 0.5s ease;
+}
+.del-btn {
+   background-color: #df0b0be2;
+   margin-left: 3rem;
+}
+.up-btn {
+   background-color: rgba(68, 173, 196, 0.746);
+   font-size: 0.8em;
+}
+.down-btn {
+   background-color: #e16432b1;
+   font-size: 0.8em;
+}
 input {
    margin: 0.4rem 0;
+   font-size: 1em;
+   padding: 5px;
+}
+.todo-list {
+   border: 1px solid #58575757;
+   box-shadow: 0 1px 1px #58575787;
+   margin: 0.3rem;
+   display: flex;
+   align-items: center;
+}
+.task {
+   flex: 1;
 }
