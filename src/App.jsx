@@ -1,6 +1,6 @@
-import Card from "./Card.jsx";
-import Pfp from "./pfp.jsx";
+import ToDoList from "./ToDoList.jsx";
+
 function App() {
-   return <Pfp />;
+   return <ToDoList />;
 }
 export default App;

@@ -112,3 +112,20 @@ div .Counter-container {
 .color-picker-container label {
    display: block;
 }
+.react-container {
+   width: 20rem;
+   margin: 4rem auto;
+}
+.btn {
+   border-radius: 0.3rem;
+   border: none;
+   padding: 0.3rem 0.8rem;
+   color: antiquewhite;
+   background-color: rgb(110, 7, 96);
+   font-size: 1em;
+   margin: 1rem;
+   display: block;
+}
+input {
+   margin: 0.4rem 0;
+}
