@@ -15,6 +15,9 @@ function ToDoList() {
          !alert("You haven't added any task");
       }
    }
+   function resetTask() {
+      setTasks([]);
+   }
 
    function deleteTask(index) {
       const updatedTask = tasks.filter((_, i) => i !== index);
@@ -30,26 +33,26 @@ function ToDoList() {
          setTasks(updatedTask);
       }
    }
-   function moveDown(index) {
-      if (index < tasks.length - 1) {
-         const updatedTask = [...tasks];
-         [updatedTask[index + 1], updatedTask[index]] = [
-            updatedTask[index],
-            updatedTask[index + 1],
-         ];
-         setTasks(updatedTask);
-      }
-   }
    // function moveDown(index) {
    //    if (index < tasks.length - 1) {
    //       const updatedTask = [...tasks];
-   //       [updatedTask[index], updatedTask[index + 1]] = [
-   //          updatedTask[index + 1],
+   //       [updatedTask[index + 1], updatedTask[index]] = [
    //          updatedTask[index],
+   //          updatedTask[index + 1],
    //       ];
    //       setTasks(updatedTask);
    //    }
    // }
+   function moveDown(index) {
+      if (index < tasks.length - 1) {
+         const updatedTask = [...tasks];
+         [updatedTask[index], updatedTask[index + 1]] = [
+            updatedTask[index + 1],
+            updatedTask[index],
+         ];
+         setTasks(updatedTask);
+      }
+   }
 
    return (
       <div className="to-do-list">
@@ -78,6 +81,9 @@ function ToDoList() {
          />
          <button className="add-btn" onClick={addTask}>
             Add
+         </button>
+         <button className="add-btn reset" onClick={resetTask}>
+            Reset
          </button>
       </div>
    );

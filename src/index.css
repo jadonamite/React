@@ -2,7 +2,7 @@ body {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
-   background-color: #160616bc;
+   background-color: #160616e2;
    color: #e9e9e9;
 }
 .card {
@@ -145,6 +145,9 @@ div .Counter-container {
    display: inline-block;
    cursor: pointer;
    transition: background-color 0.5s ease;
+}
+.reset {
+   background-color: #535353;
 }
 .del-btn {
    background-color: #df0b0be2;
