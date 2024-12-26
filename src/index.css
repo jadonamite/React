@@ -128,6 +128,10 @@ div .Counter-container {
    margin: 1rem;
    display: block;
 }
+.task {
+   padding: 0.7em;
+   font-size: 0.8em;
+}
 .to-do-list {
    text-align: center;
 }
@@ -148,12 +152,22 @@ div .Counter-container {
    background-color: #535353;
 }
 .del-btn {
+   font-size: 0.7rem;
    background-color: #df0b0be2;
    margin-left: 1rem;
 }
+.edit-btn {
+   font-size: 0.7rem;
+   background-color: #df0b0be2;
+   background-color: #df0b0be2;
+   margin-left: 0.4rem;
+   background-color: #6e41d5;
+}
+.input {
+}
 .icon {
-   width: 3rem;
-   transition: 0.00005ms ease-in-out;
+   width: 2.3rem;
+   transition: 0.5ms ease-in-out;
 }
 .icon:hover {
    scale: 1.2;
@@ -162,6 +176,11 @@ input {
    margin: 0.4rem 0;
    font-size: 1em;
    padding: 5px;
+}
+input:focus {
+   outline: none;
+   background-color: #000000;
+   color: #ffffff;
 }
 .todo-list {
    border: 1px solid #58575757;

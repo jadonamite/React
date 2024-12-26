@@ -3,7 +3,10 @@ import Arrowup from "./assets/Arrowup.png";
 import Arrowdown from "./assets/Arrowdown.png";
 
 function ToDoList() {
-   const [tasks, setTasks] = useState(["Buy food", "Take  a bath"]);
+   const [tasks, setTasks] = useState([
+      "Talk to The Holy-Spirit",
+      "Freshen Up",
+   ]);
    const [newTask, setNewTask] = useState([]);
 
    function handleInputChange(e) {
@@ -24,6 +27,12 @@ function ToDoList() {
    function deleteTask(index) {
       const updatedTask = tasks.filter((_, i) => i !== index);
       setTasks(updatedTask);
+   }
+   function editTask(index) {
+      const editingTask = tasks.filter((_, i) => i === index);
+      const updatedTask = tasks.filter((_, i) => i !== index);
+      setTasks(updatedTask);
+      setNewTask(editingTask);
    }
    function moveUp(index) {
       if (index > 0) {
@@ -55,6 +64,12 @@ function ToDoList() {
          setTasks(updatedTask);
       }
    }
+   function handleEnter(e) {
+      if (e.key === "Enter") {
+         setTasks([...tasks, newTask]);
+         setNewTask("");
+      }
+   }
 
    return (
       <div className="to-do-list">
@@ -81,6 +96,11 @@ function ToDoList() {
                   <button className="del-btn" onClick={() => deleteTask(index)}>
                      Delete
                   </button>
+                  <button
+                     className="del-btn edit-btn"
+                     onClick={() => editTask(index)}>
+                     Edit
+                  </button>
                </li>
             ))}
          </ol>
@@ -89,6 +109,8 @@ function ToDoList() {
             value={newTask}
             placeholder="Enter a new task"
             onChange={handleInputChange}
+            onKeyDown={handleEnter}
+            className="input"
          />
          <button className="add-btn" onClick={addTask}>
             Add
