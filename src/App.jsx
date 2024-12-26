@@ -7,7 +7,7 @@ function App() {
       <>
          <ToDoList />
          {/* <MyComponent /> */}
-         <Dimension></Dimension>
+         {/* <Dimension></Dimension> */}
       </>
    );
 }

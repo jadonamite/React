@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Arrowup from "./assets/Arrowup.png";
+import Arrowdown from "./assets/Arrowdown.png";
 
 function ToDoList() {
    const [tasks, setTasks] = useState(["Buy food", "Take  a bath"]);
@@ -61,14 +63,23 @@ function ToDoList() {
             {tasks.map((task, index) => (
                <li key={index} className="todo-list">
                   <span className="task">{task}</span>
+
+                  <img
+                     src={Arrowup}
+                     alt=""
+                     srcset=""
+                     className="icon"
+                     onClick={() => moveUp(index)}
+                  />
+                  <img
+                     src={Arrowdown}
+                     alt=""
+                     srcset=""
+                     className="icon"
+                     onClick={() => moveDown(index)}
+                  />
                   <button className="del-btn" onClick={() => deleteTask(index)}>
                      Delete
-                  </button>
-                  <button className="up-btn" onClick={() => moveUp(index)}>
-                     Take up
-                  </button>
-                  <button className="down-btn" onClick={() => moveDown(index)}>
-                     Take down
                   </button>
                </li>
             ))}

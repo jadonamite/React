@@ -2,7 +2,7 @@ body {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
-   background-color: #160616e2;
+   background-color: #4703e7e2;
    color: #e9e9e9;
 }
 .card {
@@ -132,9 +132,7 @@ div .Counter-container {
    text-align: center;
 }
 .add-btn,
-.del-btn,
-.up-btn,
-.down-btn {
+.del-btn {
    border-radius: 0.3rem;
    border: none;
    padding: 0.3rem 0.8rem;
@@ -151,15 +149,14 @@ div .Counter-container {
 }
 .del-btn {
    background-color: #df0b0be2;
-   margin-left: 3rem;
+   margin-left: 1rem;
 }
-.up-btn {
-   background-color: rgba(68, 173, 196, 0.746);
-   font-size: 0.8em;
+.icon {
+   width: 3rem;
+   transition: 0.00005ms ease-in-out;
 }
-.down-btn {
-   background-color: #e16432b1;
-   font-size: 0.8em;
+.icon:hover {
+   scale: 1.2;
 }
 input {
    margin: 0.4rem 0;
@@ -168,10 +165,13 @@ input {
 }
 .todo-list {
    border: 1px solid #58575757;
-   box-shadow: 0 1px 1px #58575787;
+   box-shadow: 0 1px 1px #c5c5c587;
+   border-radius: 10px;
    margin: 0.3rem;
    display: flex;
    align-items: center;
+   background-color: #fff;
+   color: #000;
 }
 .task {
    flex: 1;
