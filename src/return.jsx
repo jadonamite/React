@@ -7,7 +7,17 @@ function Dimension() {
       setWidth(window.innerWidth);
       setHeight(window.innerHeight);
    };
-   useEffect(handleResize(), [width, height]);
+   useEffect(() => {
+      window.addEventListener("resize", handleResize);
+      console.log("Event Listener Added");
+
+      return () => {
+         window.removeEventListener("resize", handleResize);
+      };
+   }, []);
+   useEffect(() => {
+      document.title = `The Width is ${width} while the Height is ${height}`;
+   }, [width, height]);
    return (
       <>
          <p className="window-prop">Window Width : {width}</p>
@@ -20,3 +30,12 @@ function Dimension() {
 }
 
 export default Dimension;
+
+// N:B : USE EFFECTS AND ITS EXPRESSIONS
+
+// useEffect(function, [dependency])
+
+// EXPRESSIONS
+// 1. useEffect((function)) => RUNS AFTER EVERY RERENDER
+// 2. useEffect((function), []) => RUNS ONLY ON MOUNT
+// 3. useEffect((function), [value]) =>RUNS ON MOUNT + @ VALUE CHANGE
