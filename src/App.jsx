@@ -1,12 +1,9 @@
-import DigitalClock from "./DigitalClock/digitalClock.jsx";
-import Dimension from "./return.jsx";
-import ToDoList from "./ToDoList.jsx";
-import MyComponent from "./useEffects.jsx";
+import CompoA from "./CompoA.jsx";
 
 function App() {
    return (
       <>
-         <DigitalClock />
+         <CompoA />
       </>
    );
 }

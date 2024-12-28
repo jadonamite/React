@@ -194,3 +194,8 @@ input:focus {
 .task {
    flex: 1;
 }
+.box {
+   border: 1.5px solid #d5d5d5;
+   padding: 1.5rem;
+   margin: 3rem;
+}
