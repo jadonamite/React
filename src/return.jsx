@@ -32,6 +32,7 @@ function Dimension() {
 export default Dimension;
 
 // N:B : USE EFFECTS AND ITS EXPRESSIONS
+// A REACT HOOK THAT TELLS JAVASCRIPT TO DO SOME TASK AT DIFFERENT EXPRESSIONS
 
 // useEffect(function, [dependency])
 
