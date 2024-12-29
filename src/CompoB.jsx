@@ -13,7 +13,6 @@ function CompoB() {
    };
 
    useEffect(handleAge, [currentYear]);
-   console.log(age);
 
    return (
       <>
