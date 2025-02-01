@@ -1,11 +1,9 @@
-import CompoA from "./CompoA.jsx";
-import MyComponent from "./useRef.jsx";
+import Home from "./Home.jsx";
 
 function App() {
    return (
       <>
-         <CompoA />
-         <MyComponent />
+         <Home />
       </>
    );
 }
